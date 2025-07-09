@@ -1,3 +1,6 @@
+# PROBLEM LINK
+https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/703/arraystrings/4836/
+
 # Given: 
 0-indexed array "nums" of n integers and an integer "k"
 
@@ -21,15 +24,21 @@ Input_2:  `nums = [100000], k = 0`
 Output_2: `[100000]`
 Input_3: `nums = [8], k = 100000`
 Output_3 = `[-1]` 
-
-# Instructions:
-1. F
-
 # Things I learned:
   * The requirements for k-radius average
+	  * there must be an element that exists for the k long radius within the array
   * What `vector<long long>` is 
+	  * bigger int
   * What each argument of `vector averages(n, -1);` do
+	  * the -1 initializes each value in the array while n sets how big the array can become length-wise.
+  * PEMDAS  is real
+	  * code still uses PEMDAS lol
 
 # Completions
 ## Completion 1:
-Solution Peeks: 5 times
+Solution Peeks: 8 times
+Solution Code:
+``` 
+	f 
+```
+Solution Diagram: ![[Diagram 7.png|200]]
