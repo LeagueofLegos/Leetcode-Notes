@@ -39,6 +39,35 @@ Output_3 = `[-1]`
 Solution Peeks: 8 times
 Solution Code:
 ``` 
-	f 
+	class Solution {
+	public:
+	    vector<int> getAverages(vector<int>& nums, int k) {
+	        if (k == 0) {
+	            return nums;
+	        }
+	        
+	        int winSize = 2 * k + 1;
+	        int n = nums.size();
+	        vector<int> avgs(n, -1);
+	        if (winSize > n) {
+	            return avgs;
+	        }
+	        
+	        vector<long long> prefix(n + 1);
+	        for(int i = 0; i < n; i++) {
+	            prefix[i + 1] = prefix[i] + nums[i];
+	        }
+	        
+	        for(int i = k; i < (n - k); i++) {
+	            int leftBound = i - k, rightBound = i + k;
+	            long long subArraySum = prefix[rightBound + 1] - prefix[leftBound];
+	            int avg = subArraySum / winSize;
+	            avgs[i] = avg;
+	        }
+	                
+	        return avgs;
+	        
+	    }
+	};
 ```
 Solution Diagram: ![[Diagram 7.png|200]]
